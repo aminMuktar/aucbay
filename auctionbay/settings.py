@@ -37,9 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
 
     #3rd party
     'rest_framework',
+    'rest_framework.authtoken',
+    'corsheaders',
+    'djoser',
     #Local
     'account.apps.AccountConfig',
     'auctioneer.apps.AuctioneerConfig',
@@ -48,7 +52,10 @@ INSTALLED_APPS = [
     'item.apps.ItemConfig'
 
 ]
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
 
+]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -57,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'auctionbay.urls'
@@ -128,6 +136,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL= '/media/'
+MEDIA_ROOT = BASE_DIR / 'media/' 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
