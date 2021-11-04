@@ -138,6 +138,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL= '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/' 
+AUTH_USER_MODEL = "bidder.bidder"
+AUTH_USER_MODEL = "auctioneer.auctioneer"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
