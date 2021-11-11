@@ -4,8 +4,11 @@ class biddocserializers(serializers.ModelSerializer):
     class Met:
         model= biddoc
         fields = (
-            'doc_id',
             'denial_of_val',
             'init_price',
             'deadline',
+           ' bidCount',
+            'highBidder', 
+            'auctionStatus',
+            'bid_doc_created_at',
         )

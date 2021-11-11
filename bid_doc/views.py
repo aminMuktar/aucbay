@@ -5,9 +5,9 @@ from .models import biddoc
 from .serializers import biddocserializers
 
 # Create your views here.
-class itemlist (APIView):
+class biddoc_list (APIView):
     def get(self,request,format=None):
         item = biddoc.objects.all()[0:4]
-        serializer = biddoc(item,many=True)
+        serializer = biddoc(biddoc,many=True)
         return Response(serializer.data)
         

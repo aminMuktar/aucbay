@@ -10,32 +10,33 @@ class category(models.Model):
         ordering = ('name',)
     def __str__(self):
         return self.name
+
+
     def get_absolute_url(self):
             return f'/{self.slug}/'
 
 
 class items(models.Model):
     Category = models.ForeignKey(category, related_name='item',on_delete=models.CASCADE)
-    item_id = models.AutoField(primary_key=True)
-    item_name = models.CharField(max_length=255)
-    item_price = models.DecimalField(max_digits=12, decimal_places=2)
-    item_img = models.ImageField(upload_to ='uploads/',blank=True,null=True)
-    item_description= models.CharField(max_length=400)
-    item_location= models.CharField(max_length=20)
-    item_remaining_time = models.DateTimeField()
-    ispection_start = models.DateTimeField()
-    ispection_end = models.DateTimeField()
-    min_increment = models.IntegerField()
-    attribute = models.CharField(max_length=255)
+    item_name = models.CharField(max_length=255,verbose_name="Item Name")
+    item_price = models.DecimalField(max_digits=12, decimal_places=2,verbose_name="Item price")
+    item_img = models.ImageField(upload_to ='uploads/',blank=True,null=True,verbose_name="Item img")
+    item_description= models.CharField(max_length=400,verbose_name="Item Description")
+    item_location= models.CharField(max_length=20,verbose_name="Item Location" )
+    item_remaining_time = models.DateTimeField(verbose_name="Item Remaining Time")
+    ispection_start = models.DateTimeField(verbose_name="Ispection Start" )
+    ispection_end = models.DateTimeField(verbose_name="Ispection End" )
+    min_increment = models.IntegerField(verbose_name="Min Increment")
+    attribute = models.CharField(max_length=255,verbose_name="Attribute" )
     #New col
-    thumbnail = models.ImageField(upload_to="uploads/",blank=True,null=True)
-    item_date_added = models.DateTimeField(auto_now_add=True)
+    thumbnail = models.ImageField(upload_to="uploads/",blank=True,null=True,verbose_name="Thumbnail")
+    item_date_added = models.DateTimeField(auto_now_add=True,verbose_name="Item Date Added")
     slug = models.SlugField(unique=True)
 
     class Meta:
         ordering = ('item_date_added',)
     def __str__(self):
-        return self.name
+        return self.item_name
     
     def get_absolute_url(self):
         return f'/{self.category.slug}/{self.slug}/'
