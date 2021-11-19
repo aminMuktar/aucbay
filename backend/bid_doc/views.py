@@ -8,6 +8,6 @@ from .serializers import biddocserializers
 class biddoc_list (APIView):
     def get(self,request,format=None):
         biddoc1 = biddoc.objects.all()[0:4]
-        serializer = biddoc(biddoc,many=True)
-        return Response(serializer.data)
+        serializer = biddoc(biddoc,many=True) 
+        return Response(serializer.data)      
         

@@ -5,14 +5,14 @@ from django.db import models
 
 
 
-class biddoc(models.Model):
+class biddoc(models.Model): 
     denial_of_val   =models.IntegerField(verbose_name="Denial of Validity")
     init_price      =models.FloatField(verbose_name="Initial Price")
     deadline        =models.DateTimeField(verbose_name="Deadline")
     #new
     #bidcount:-The number of bids that have been placed for the auction.
     bidCount        =models.IntegerField(verbose_name="Bid Count") 
-    #HighBidder:- Indicates if the buyer is the highest bidder.
+    #HighBidder:- Indicates if the buyer is the highest bidder.                           
     highBidder      =models.BooleanField(default=False,verbose_name="High Bidder")
     #An enumeration value that represents the current state of the auction, such as ACTIVE or ENDED.
     auctionStatus   =models.BooleanField(default=True,verbose_name="Auction Status") #True for active , false for Ended

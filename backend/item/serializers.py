@@ -8,10 +8,10 @@ class itemSerializer(serializers.ModelSerializer):
         fields = (     
             'name',      
             "item_id",
-            "item_name",
+            "item_name", 
             "item_price",
             "item_img",
-            "item_description",
+            "item_description",    
             "item_location",
             "item_remaining_time",
             "ispection_start",
