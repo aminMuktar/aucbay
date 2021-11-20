@@ -4,7 +4,11 @@ from .models import category,item
 
 class itemSerializer(serializers.ModelSerializer):
     class Meta:
+<<<<<<< HEAD:backend/item/serializers.py
         model = item
+=======
+        model = items
+>>>>>>> 53abc2a04be4da10424be12debbdd6b83633929a:item/serializers.py
         fields = (     
             'name',      
             "item_id",
