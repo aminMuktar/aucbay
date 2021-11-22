@@ -37,22 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',            
     'django.contrib.staticfiles',
-<<<<<<< HEAD:backend/backend/settings.py
     'bid_doc', 
     'item',
-=======
-    
-
     #3rd party
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-    #Local
-    'account.apps.AccountConfig',
-    'bid_doc.apps.BidDocConfig',
-    'item.apps.ItemConfig'
-
->>>>>>> 53abc2a04be4da10424be12debbdd6b83633929a:auctionbay/settings.py
 ]
 
 MIDDLEWARE = [
@@ -134,12 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-<<<<<<< HEAD:backend/backend/settings.py
-=======
 MEDIA_URL= '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/' 
->>>>>>> 53abc2a04be4da10424be12debbdd6b83633929a:auctionbay/settings.py
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

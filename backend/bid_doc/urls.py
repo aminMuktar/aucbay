@@ -3,5 +3,5 @@ from bid_doc import views
 
 
 urlpatterns = [
-    path('biddoc/',views.biddoc_list.as_view()),          
+    path('biddoc_list/',views.biddoc_list.as_view()),          
 ]

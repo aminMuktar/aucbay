@@ -9,11 +9,6 @@ class biddocserializers(serializers.ModelSerializer):
             'deadline',
            ' bidCount',
             'highBidder', 
-<<<<<<< HEAD:backend/bid_doc/serializers.py
-            'auctionStatus', 
-            'bid_doc_created_at',          
-=======
             'auctionStatus',
             'bid_doc_created_at',
->>>>>>> 53abc2a04be4da10424be12debbdd6b83633929a:bid_doc/serializers.py
         )

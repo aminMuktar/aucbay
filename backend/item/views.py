@@ -5,9 +5,8 @@ from .models import item
 from .serializers import itemSerializer
 
 # Create your views here.  
-class itemlist (APIView): 
+class itemlist (APIView):     
     def get(self,request,format=None):  
-        item1 = item.objects.all()[0:4]
-        serializer = itemSerializer(item,many=True)
+        items = item.objects.all()[0:4]      
+        serializer = itemSerializer(items,many=True)
         return Response(serializer.data)     
-        
