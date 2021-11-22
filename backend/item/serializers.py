@@ -11,7 +11,7 @@ class itemSerializer(serializers.ModelSerializer):
             "item_img",
             "item_description",    
             "item_location",
-            "item_remaining_time",
+            "item_remaining_time",      
             "ispection_start",
             "ispection_end",      
             "min_increment",

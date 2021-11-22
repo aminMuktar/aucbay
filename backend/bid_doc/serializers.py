@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import biddoc
 class biddocserializers(serializers.ModelSerializer):
     class Met:
-        model= biddoc
+        model= biddoc                 
         fields = (
             'denial_of_val',
             'init_price',

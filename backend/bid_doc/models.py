@@ -21,7 +21,7 @@ class biddoc(models.Model):
     def __str__ (self):                      
         return self.deadline
 
-    def get_absolute_url(self):
+    def get_absolute_url(self):                           
             return f'/{self.slug}/'
 
     class Meta:

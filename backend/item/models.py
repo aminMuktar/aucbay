@@ -25,7 +25,7 @@ class item(models.Model):
     item_location= models.CharField(max_length=20,verbose_name="Item Location" )
     item_remaining_time = models.DateTimeField(verbose_name="Item Remaining Time")
     ispection_start = models.DateTimeField(verbose_name="Ispection Start" )
-    ispection_end = models.DateTimeField(verbose_name="Ispection End" )
+    ispection_end = models.DateTimeField(verbose_name="Ispection End" )     
     min_increment = models.IntegerField(verbose_name="Min Increment")
     attribute = models.CharField(max_length=255,verbose_name="Attribute" )
     #New col
