@@ -7,8 +7,8 @@ class biddocserializers(serializers.ModelSerializer):
             'denial_of_val',
             'init_price',
             'deadline',
-           ' bidCount',
-            'highBidder', 
+           ' bidCount',  
+            'highBidder',         
             'auctionStatus',
             'bid_doc_created_at',
         )

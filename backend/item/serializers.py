@@ -6,8 +6,6 @@ class itemSerializer(serializers.ModelSerializer):
     class Meta:
         model = item
         fields = (     
-                 
-           
             "item_name",
             "item_price",
             "item_img",
@@ -15,9 +13,9 @@ class itemSerializer(serializers.ModelSerializer):
             "item_location",
             "item_remaining_time",
             "ispection_start",
-            "ispection_end", 
+            "ispection_end",      
             "min_increment",
-            "attribute",
+            "attribute",                                  
     #New col
             "thumbnail",
             "item_date_added", 

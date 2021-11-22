@@ -11,11 +11,11 @@ class category(models.Model):
     def __str__(self):
         return self.name
 
-
+                                             
     def get_absolute_url(self):
             return f'/{self.slug}/'
 
-
+            
 class item(models.Model):
     Category = models.ForeignKey(category, related_name='item',on_delete=models.CASCADE)
     item_name = models.CharField(max_length=255,verbose_name="Item Name")
